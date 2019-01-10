@@ -2,12 +2,27 @@
   <html>
     <head>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+      <style>
+        ul.with-square-bullets {
+          list-style: square outside;
+        }
+      </style>
     </head>
     <body>
+      
       <section class="section">
         <div class="container">
-          <h1 class="title">Velukh's Gaming Blog</h1>
-          {{ content }}  
+          <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="/">
+                <h1 class="title">Velukh's {{ page.heading_title }} Blog</h1>
+              </a>
+            </div>
+          </nav>
+
+          <div class="section">
+            {{ content }}  
+          </div>
         </div>
       </section>
     </body>

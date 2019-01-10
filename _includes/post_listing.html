@@ -1,0 +1,23 @@
+<div class="columns">
+  {% for post in site.posts %}
+    {% if post.game == include.game %}
+      <div class="column is-4">
+        <div class="card">
+          <header class="card-header">
+            <h4 class="card-header-title is-size-4">
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </h4>
+          </header>
+          <div class="card-content">
+            <p class="content">
+              {{ post.excerpt }}
+            </p>
+            <p class="content has-text-grey">
+              Posted on {{ post.date | date: '%B %d, %Y' }}
+            </p>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>      
